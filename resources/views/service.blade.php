@@ -28,11 +28,11 @@
         <a class="nav-link" href="/about">About</a>
         <a class="nav-link" href="/contact">contact</a>
         <a class="nav-link" href="/service">service</a>
-        <a class="nav-link" href="/home">Home</a>
       </div>
     </div>
   </div>
 </nav>
 <h1>service page</h1>
+{{-- <p>{{ $service_id }}</p> --}}
     </body>
 </html>

@@ -19,7 +19,7 @@ Route::get('/', function () {
 Route::get('/home-page', function () {
     return view('home');
 })->name('home');
-Route::get('/service-details/{service_id}', function () {
+Route::get('/service-details', function () {
     return view('service');
 })->name('service');
 Route::get('/contact-us', function () {
@@ -30,3 +30,39 @@ Route::get('/about-me', function () {
 })->name('about');
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//route problem
+// Route::get('/service-details/{service_id}/{service_name?}', function ($service_id, $service_name=null) {
+//     return "service_details". $service_id. ' '.$service_name;
+// })->name('service');
+// Route::get('/user/{name}/{id}', function ($name ,$id) {
+//     echo $name, $id;
+// })->where(['id' => '[0-9]+' , 'name'=> '[A-Za-z]+'] );
+
+// Route::get('/category/{category_name}', function ($category_name){
+//     echo $category_name;
+// })->whereIn('category_name', ['electronics', 'movie', 'books', 'watch', 'laptop']);
+
+
+// Route::get('/search/{keywords}', function($keywords){
+//     echo "$keywords";
+// })->where('keywords', '.*');
