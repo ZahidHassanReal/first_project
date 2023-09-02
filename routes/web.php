@@ -14,17 +14,58 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
-Route::get('/home-page', function () {
-    return view('home');
+    return view('home' ,[
+        'page_title' => 'Home Page',
+        'name' => 'Laravel 9 master Classs'
+    ]);
 })->name('home');
+Route::get('/donate-page', function () {
+    return view('donate');
+})->name('donate');
 Route::get('/service-details', function () {
-    return view('service');
+ $services = [
+    'web development',
+    'App development',
+    'grapics development',
+    'design development',
+    'fluter development',
+
+ ];
+    return view('service', compact('services'));
 })->name('service');
 Route::get('/contact-us', function () {
-    return view('contact');
+   $page_name = "Contact Page";
+    $product_count = 15;
+
+    $products=[
+               1 => [
+        'name' => 'Bag',
+        'color' => 'Red',
+        'price' => '1200',
+       ],
+       2 => [
+        'name' => 'Sunglass',
+        'color' => 'Black',
+        'price' => '550',
+       ],
+       3 => [
+        'name' => 'BodySpray',
+        'color' => 'Blue',
+        'price' => '850',
+       ],
+
+    ];
+    $product_count = count($products);
+
+    return view('contact', compact(
+        'page_name',
+        'product_count',
+        'products'
+    ));
 })->name('contact');
+
+
+
 Route::get('/about-me', function () {
     return view('about');
 })->name('about');

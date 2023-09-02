@@ -1,6 +1,3 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Real project</a>
@@ -9,13 +6,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="/">welcome</a>
+        <a class="nav-link active" aria-current="page" href="/">Home Page</a>
         <a class="nav-link" href="{{ route('about') }}">About</a>
         <a class="nav-link" href="{{ route('contact') }}">contact</a>
         <a class="nav-link" href="{{ route('service') }}">service</a>
-        <a class="nav-link" href="{{ route('home') }}">Home</a>
+        <a class="nav-link" href="{{ route('donate') }}">Donate Me</a>
       </div>
     </div>
   </div>
 </nav>
-<h1>welcome page</h1>

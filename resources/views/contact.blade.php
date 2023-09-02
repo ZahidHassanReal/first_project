@@ -1,18 +1,44 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <he>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('master')
 
-        <title>Laravel</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-        </style>
-    </he ad>
-    <body class="antialiased">
+<h1>{{ $page_name }}</h1>
 
-<h1>contact page</h1>
-    </body>
-</html>
+
+       @forelse($products as $key => $product )
+       @if ($loop->first)
+       @continue
+
+       @endif
+           <ul class="">
+                    <li>{{ $key }}</li>
+        <li>{{ $product['name'] }}</li>
+        <li>{{ $product['color'] }}</li>
+        <li>{{ $product['price'] }}</li>
+       </ul>
+ @empty
+ <p>No products fouend</p>
+@endforelse
+
+
+
+@endsection
+
+
+
+
+
+
+
+
+
+
+{{-- @if ($product_count < 5)
+<p>please refele</p>
+
+@else
+<p> product count : {{ $product_count }}</p>
+
+@endif
+
+@endsection --}}
